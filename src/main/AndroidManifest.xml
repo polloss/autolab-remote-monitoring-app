@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.github.pires.obd.reader"
+    package="co.com.autolab.remotemonitoring"
     android:versionCode="13"
     android:versionName="2.0-RC2">
 
@@ -17,40 +17,40 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_btcar"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.github.pires.obd.reader.activity.MainActivity"
+            android:name="co.com.autolab.remotemonitoring.activity.MainActivity"
             android:configChanges="orientation|screenSize"
             android:launchMode="singleInstance"
             android:label="@string/app_name">
-            <intent-filter>
+            <intent-filter>fg
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.github.pires.obd.reader.activity.ConfigActivity"
+            android:name="co.com.autolab.remotemonitoring.activity.ConfigActivity"
             android:launchMode="singleInstance"
             android:label="@string/app_name"></activity>
         <activity
-            android:name="com.github.pires.obd.reader.activity.TroubleCodesActivity"
+            android:name="co.com.autolab.remotemonitoring.activity.TroubleCodesActivity"
             android:launchMode="singleInstance"
             android:label="@string/title_activity_trouble_codes"></activity>
 
         <activity
-            android:name="com.github.pires.obd.reader.activity.TripListActivity"
+            android:name="co.com.autolab.remotemonitoring.activity.TripListActivity"
             android:launchMode="singleInstance"
             android:label="@string/title_activity_trips_list"></activity>
 
         <service
-            android:name="com.github.pires.obd.reader.io.ObdGatewayService"
+            android:name="co.com.autolab.remotemonitoring.io.ObdGatewayService"
             android:launchMode="singleInstance"
             android:exported="false" />
         <service
-            android:name="com.github.pires.obd.reader.io.MockObdGatewayService"
+            android:name="co.com.autolab.remotemonitoring.io.MockObdGatewayService"
             android:launchMode="singleInstance"
             android:exported="false" />
     </application>

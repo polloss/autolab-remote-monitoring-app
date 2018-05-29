@@ -11,51 +11,184 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:tag="SPEED"
-            android:text="@string/text_zero"
-            android:textSize="@dimen/abc_text_size_display_3_material" />
-
-        <TextView
-            android:id="@+id/compass_text"
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="end"
-            android:text="@string/text_orientation_default"
-            android:textSize="@dimen/abc_text_size_display_3_material" />
+            android:orientation="vertical"
+            android:elevation="2dp"
+            android:outlineProvider="bounds"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/speedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="SPEED"
+                android:text="@string/text_zero"
+                android:textSize="@dimen/abc_text_size_display_2_material" />
+
+            <TextView
+                android:id="@+id/speedTitleView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="@string/speed" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:elevation="2dp"
+            android:outlineProvider="bounds"
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/compass_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/text_orientation_default"
+                android:textSize="@dimen/abc_text_size_display_2_material" />
+
+            <TextView
+                android:id="@+id/compassTitleView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="@string/compass" />
+
+        </LinearLayout>
+
     </TableRow>
 
     <TableRow
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
-        <TextView
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:orientation="vertical"
+            android:elevation="2dp"
+            android:outlineProvider="bounds"
             android:gravity="center"
-            android:tag="FUEL_CONSUMPTION"
-            android:text="@string/text_consumption_default" />
+            >
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:tag="ENGINE_RUNTIME"
-            android:text="@string/text_runtime_default" />
+            <TextView
+                android:id="@+id/fuel_consumption_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:tag="FUEL_CONSUMPTION"
+                android:text="@string/text_consumption_default"
+                android:textSize="@dimen/abc_text_size_display_2_material"/>
 
-        <TextView
+            <TextView
+                android:id="@+id/fuelConsumptionTitleView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="@string/fuel_consumption" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:orientation="vertical"
+            android:elevation="2dp"
+            android:outlineProvider="bounds"
             android:gravity="center"
-            android:tag="ENGINE_RPM"
-            android:text="" />
+            >
+
+            <TextView
+                android:id="@+id/engineRuntimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:tag="ENGINE_RUNTIME"
+                android:text="@string/text_runtime_default"
+                android:textSize="@dimen/abc_text_size_display_2_material"/>
+
+            <TextView
+                android:id="@+id/engineRuntimeTitleView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="@string/engine_runtime" />
+
+        </LinearLayout>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:elevation="2dp"
+            android:outlineProvider="bounds"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/rpmTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:tag="ENGINE_RPM"
+                android:text=""
+                android:textSize="@dimen/abc_text_size_display_2_material"/>
+
+            <TextView
+                android:id="@+id/rpmTitleView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="@string/engine_rpm" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:elevation="2dp"
+            android:outlineProvider="bounds"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/oilTempTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:tag="ENGINE_OIL_TEMP"
+                android:textSize="@dimen/abc_text_size_display_2_material"/>
+
+            <TextView
+                android:id="@+id/oilTempTitleView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="@string/oil_temp" />
+
+        </LinearLayout>
+
     </TableRow>
 
     <ScrollView
